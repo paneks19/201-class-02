@@ -1,20 +1,60 @@
-h1{
-    background-color: springgreen;
+body *{
+    background-color: lightgray;
+    border: solid black 1px;
+    margin: 10px;
+    padding: 10px;
 }
 
-li{
-    color: blue;
+h1{
+    background-color: springgreen;
+    padding: 10px;
+    text-align: center;
+    font-size: 35px;
+    text-decoration: wavy;
+    border: solid darkgray;
+}
+
+/* body *{
+
+} */
+
+h2{ 
+    font-size: 25px;
+    color: darkgreen;
+    background-color: lightgreen;
+
+}
+
+p{
+    font-size: 20px;
+    color: navy;
+    background-color: whitesmoke;
+}
+
+strong{
+    text-emphasis: bold;
+    color: gold;
+    background-color: rgb(60, 0, 128);
 }
 
 ul{
     background-color: green;
+    font-size: 15px;
 }
 
-#thingTwo{
+li{
+    color: darkblue;
+    background: lightblue;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+
+#rock{
     color: yellow;
 }
 
-.thingsBig{
-    font-size: 25px;
+.education{
+    font-style: italic ;
 }
 
