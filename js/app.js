@@ -118,38 +118,41 @@ if (rockSpot.toLowerCase() === 'yes' || rockSpot.toLowerCase() === 'y') {
 
 var userGuessCountries = prompt('How many countries have I visited (so far) in my life? Hint: There are currently 195 countries in the world and I live in one of them, so pick a number between 0 and 196.');
 
+// console.log(parseInt(userGuessCountries));
+
 var guessCount = 0;
 var guessRemain = 4;
-var correct = '27';
+var correct = 27;
 
 for (var i=0; i<3; i++){
-  if(userGuessCountries === correct){
+  if(parseInt(userGuessCountries) === correct){
     guessCount++;
     alert('You are correct, I have visited 27 countries. It took you ' + guessCount + ' tries.');
     scoreCount++;
     break;
-  } else if (userGuessCountries < correct) {
+  } else if (parseInt(userGuessCountries) < correct) {
     guessCount++;
     userGuessCountries = prompt('Nope, try higher. ' + (guessRemain - guessCount) + ' Guesses remain!');
-  } else if (userGuessCountries > correct) {
+  } else if (parseInt(userGuessCountries) > correct) {
     guessCount++;
     userGuessCountries = prompt('Nope, try lower. ' + (guessRemain-guessCount) + ' Guesses remain!');
   } else {
     guessCount++;
-    userGuessCountries = prompt('Invalid entry, please enter a number between 0 and 196. That cost you a guess!' + (guessRemain-guessCount) + ' Guesses remain!');
+    userGuessCountries = prompt('Invalid entry, please enter a number between 0 and 196. That cost you a guess! ' + (guessRemain-guessCount) + ' Guesses remain!');
   }
 }
 
-if (i===3 && userGuessCountries !== correct) {
-  alert('Sorry, you did not guess the correct number of countries and did not earn a point. I have visited 27 countries.');
+// console.log('value of i at end of loop: ' + i);
+// console.log ('user guess at end of loop: ' + userGuessCountries);
+// console.log('correct value should read 27: ' + correct);
+
+if (i===3 && parseInt(userGuessCountries) === correct) {
+  alert('You got it right on your last try. I have visited 27 countries.');
 }
 
-
-
-
-
-
-
+if (i===3 && parseInt(userGuessCountries) !== correct) {
+  alert('Sorry, you did not guess the correct number of countries and did not earn a point. I have visited 27 countries.');
+}
 
 // thank player
 
