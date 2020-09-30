@@ -33,6 +33,8 @@
 
 //prompt user for name
 
+var scoreCount = 0;
+
 var userName = prompt('Hello user. Can I call you something other than user? Please enter your preferred name: ');
 // console.log('User\'s name is: ' + userName);
 
@@ -46,6 +48,7 @@ var playQuestion = prompt('Hello ' + userName + '! Would you like to play a gues
 if (playQuestion.toLowerCase() === 'yes' || playQuestion.toLowerCase() === 'y') {
 // console.log('Correct');
   alert('That\'s great, you didn\'t really have a choice!');
+  scoreCount++;
 } else {
   alert('That\'s too bad. We are going to play anyway!');
 // console.log('Incorrect');
@@ -59,6 +62,7 @@ var livedOverSeas = prompt('Have I ever lived in another country?');
 
 if (livedOverSeas.toLowerCase() === 'yes' || livedOverSeas.toLowerCase() === 'y') {
   alert('You are correct, I lived and worked in Tunis, Tunisia for 3 years.');
+  scoreCount++;
 // console.log('Correct');
 } else {
   alert('Incorrect, I lived and worked in Tunis, Tunisia for 3 years.');
@@ -73,6 +77,7 @@ var hotAir = prompt('Have I ever been a hot air balloon instructor?');
 
 if (hotAir.toLowerCase() === 'no' || hotAir.toLowerCase() === 'n') {
   alert('You are correct, but it sounds like a great summer job!');
+  scoreCount++;
 // console.log('Correct');
 } else {
   alert('Sorry, I\'m not that cool.');
@@ -87,6 +92,7 @@ var liveSeattle = prompt('Do I currently live in Seattle?');
 
 if (liveSeattle.toLowerCase() === 'no' || liveSeattle.toLowerCase() === 'n') {
   alert('You are correct, I live in Bellingham, but I did live in Seattle for 6 years.');
+  scoreCount++;
 // console.log('Correct');
 } else {
   alert('Incorrect, I lived in Seattle for 6 years. I now live in Bellingham.');
@@ -101,12 +107,50 @@ var rockSpot = prompt('Did my first job involve starring at rocks for 8 hours a 
 
 if (rockSpot.toLowerCase() === 'yes' || rockSpot.toLowerCase() === 'y') {
   alert('Unfortunately, yes, you are correct. My first job involved watching large rocks be placed by an excavator and signalling to the operator if it was in the correct position. Very exciting!');
+  scoreCount++;
 // console.log('Correct');
 } else {
   alert('Incorrect, as boring as it was, that was my first job.');
 // console.log('Incorrect');
 }
 
+//guessing game, user needs to guess number of countries I've visited
+
+var userGuessCountries = prompt('How many countries have I visited (so far) in my life? Hint: There are currently 195 countries in the world and I live in one of them, so pick a number between 0 and 196.');
+
+var guessCount = 0;
+var guessRemain = 4;
+var correct = '27';
+
+for (var i=0; i<3; i++){
+  if(userGuessCountries === correct){
+    guessCount++;
+    alert('You are correct, I have visited 27 countries. It took you ' + guessCount + ' tries.');
+    scoreCount++;
+    break;
+  } else if (userGuessCountries < correct) {
+    guessCount++;
+    userGuessCountries = prompt('Nope, try higher. ' + (guessRemain - guessCount) + ' Guesses remain!');
+  } else if (userGuessCountries > correct) {
+    guessCount++;
+    userGuessCountries = prompt('Nope, try lower. ' + (guessRemain-guessCount) + ' Guesses remain!');
+  } else {
+    guessCount++;
+    userGuessCountries = prompt('Invalid entry, please enter a number between 0 and 196. That cost you a guess!' + (guessRemain-guessCount) + ' Guesses remain!');
+  }
+}
+
+if (i===3 && userGuessCountries !== correct) {
+  alert('Sorry, you did not guess the correct number of countries and did not earn a point. I have visited 27 countries.');
+}
+
+
+
+
+
+
+
+
 // thank player
 
-alert('Thanks for playing ' + userName + '!');
+alert('Thanks for playing ' + userName + '! You got ' + scoreCount + ' questions correct out of 7. Heads up, you need a 90% to pass this class, with only 7 questions you need to get them all correct!');
