@@ -148,11 +148,35 @@ for (var i=0; i<3; i++){
 
 if (i===3 && parseInt(userGuessCountries) === correct) {
   alert('You got it right on your last try. I have visited 27 countries.');
+  scoreCount++;
 }
 
 if (i===3 && parseInt(userGuessCountries) !== correct) {
   alert('Sorry, you did not guess the correct number of countries and did not earn a point. I have visited 27 countries.');
 }
+
+//present a list of boys names to the user ask them to guess which one is my son's name
+
+var boyNames = ['Trent', 'John', 'Oliver', 'Lucca', 'Pat', 'Jess', 'Colby'];
+
+alert('Let\'s play another guessing game. On the next pop up, I will show you 7 names. My son\'s name is one of them. You have 6 tries to guess his name.')
+
+var userGuessName = prompt('Guess one of the following names: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
+
+for (var j=0; j<5; j++) {
+  if (userGuessName === boyNames[3]) {
+    alert('You are correct, my son\'s name is Lucca!');
+    scoreCount++;
+    break;
+  } else {
+    userGuessName = prompt('Nope, try again: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
+  }
+}
+
+if(j===5 && userGuessName !== boyNames[3]) {
+  alert('You were not able to guess his name in 6 attempts and did not earn a point. If you guessed a new name at random each try, there is a 85% chance that you would have gotten it right. His name is Lucca.');
+}
+
 
 // thank player
 

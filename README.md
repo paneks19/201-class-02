@@ -10,6 +10,7 @@ This app prompts a user for their name and then asks them to play a guessing gam
 
 - Found CSS font styles at w3schools.com
 - Found out how to create a sticky header using the `position: fixed;` via W3schools.com
+- Figured out how to use `parseInt();` to force users input to be a number via W3school.com
 
 ### Reflections and Comments
 
