@@ -157,24 +157,54 @@ if (i===3 && parseInt(userGuessCountries) !== correct) {
 
 //present a list of boys names to the user ask them to guess which one is my son's name
 
-var boyNames = ['Trent', 'John', 'Oliver', 'Lucca', 'Pat', 'Jess', 'Colby'];
+// var boyNames = ['Trent', 'John', 'Oliver', 'Lucca', 'Pat', 'Jess', 'Colby'];
 
-alert('Let\'s play another guessing game. On the next pop up, I will show you 7 names. My son\'s name is one of them. You have 6 tries to guess his name.')
+// alert('Let\'s play another guessing game. On the next pop up, I will show you 7 names. My son\'s name is one of them. You have 6 tries to guess his name.')
 
-var userGuessName = prompt('Guess one of the following names: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
+// var userGuessName = prompt('Guess one of the following names: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
 
-for (var j=0; j<5; j++) {
-  if (userGuessName === boyNames[3]) {
-    alert('You are correct, my son\'s name is Lucca!');
-    scoreCount++;
-    break;
-  } else {
-    userGuessName = prompt('Nope, try again: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
+// for (var j=0; j<5; j++) {
+//   if (userGuessName === boyNames[3]) {
+//     alert('You are correct, my son\'s name is Lucca!');
+//     scoreCount++;
+//     break;
+//   } else {
+//     userGuessName = prompt('Nope, try again: Trent, John, Oliver, Lucca, Pat, Jess, or Colby');
+//   }
+// }
+
+// if(j===5 && userGuessName !== boyNames[3]) {
+//   alert('You were not able to guess his name in 6 attempts and did not earn a point. If you guessed a new name at random each try, there is a 85% chance that you would have gotten it right. His name is Lucca.');
+// }
+
+//Country guessing game using array correctly this time
+
+var countryVisit = ['Croatia', 'Singapore', 'Poland', 'Hungry', 'Japan', 'India', 'Thailand', 'South Africa', 'Australia', 'New Zealand'];
+
+var userCountry = prompt('Now let\'s play a another guessing game. Can you guess one of the top ten countries that I would most like to visit? You have 6 attempts.');
+
+var winner = false;
+
+for (var k=0; k<4; k++) {
+
+  for (var l=0; 0<countryVisit.length; l++) {
+
+    if (userCountry === countryVisit[l]){
+      alert('You guessed correctly, ' + userCountry + ' is in my top ten places to visit!');
+      scoreCount++;
+      winner = true;
+      k=4;
+      break;
+    }
   }
+  if (winner !== true) {
+    userCountry = prompt('That sounds like a great trip, but it is not in my top ten. Try again.');
+  }
+
 }
 
-if(j===5 && userGuessName !== boyNames[3]) {
-  alert('You were not able to guess his name in 6 attempts and did not earn a point. If you guessed a new name at random each try, there is a 85% chance that you would have gotten it right. His name is Lucca.');
+if (k===4 && winner !== true) {
+  alert('You did not successfully guess any of the top ten countries that I would like to visit. You can find a list of the top ten places I would like to visit at the bottom of my page.');
 }
 
 
