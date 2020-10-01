@@ -179,7 +179,7 @@ if (i===3 && parseInt(userGuessCountries) !== correct) {
 
 //Country guessing game using array correctly this time
 
-var countryVisit = ['Croatia', 'Singapore', 'Poland', 'Hungry', 'Japan', 'India', 'Thailand', 'South Africa', 'Australia', 'New Zealand'];
+var countryVisit = ['croatia', 'singapore', 'poland', 'hungry', 'japan', 'india', 'thailand', 'south africa', 'australia', 'new zealand'];
 
 var userCountry = prompt('Now let\'s play a another guessing game. Can you guess one of the top ten countries that I would most like to visit? You have 6 attempts.');
 
@@ -189,7 +189,7 @@ for (var k=0; k<5; k++) {
 
   for (var l=0; l<countryVisit.length; l++) {
 
-    if (userCountry === countryVisit[l]){
+    if (userCountry.toLowerCase() === countryVisit[l]){
       alert('You guessed correctly, ' + userCountry + ' is in my top ten places to visit!');
       scoreCount++;
       winner = true;
