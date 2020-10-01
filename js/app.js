@@ -185,15 +185,15 @@ var userCountry = prompt('Now let\'s play a another guessing game. Can you guess
 
 var winner = false;
 
-for (var k=0; k<4; k++) {
+for (var k=0; k<5; k++) {
 
-  for (var l=0; 0<countryVisit.length; l++) {
+  for (var l=0; l<countryVisit.length; l++) {
 
     if (userCountry === countryVisit[l]){
       alert('You guessed correctly, ' + userCountry + ' is in my top ten places to visit!');
       scoreCount++;
       winner = true;
-      k=4;
+      k=5;
       break;
     }
   }
@@ -203,7 +203,7 @@ for (var k=0; k<4; k++) {
 
 }
 
-if (k===4 && winner !== true) {
+if (k===5 && winner !== true) {
   alert('You did not successfully guess any of the top ten countries that I would like to visit. You can find a list of the top ten places I would like to visit at the bottom of my page.');
 }
 
