@@ -8,6 +8,10 @@ This app prompts a user for their name and then asks them to play a guessing gam
 
 ### Author: Simon Panek
 
+### Paired Programming
+
+Mariko was driver, Simon was navigator.
+
 ### Links and Resources
 
 - Found CSS font styles at w3schools.com
