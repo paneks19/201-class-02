@@ -4,6 +4,8 @@
 
 This app prompts a user for their name and then asks them to play a guessing game regarding random facts about the page author. The user is alerted to the correct answer after each question. Upon completion of the guessing game, the user is thanked for playing and the page is displayed with some biographical info about the author.
 
+9/30 Update: Page now includes 2 additional guessing games a number guessing game using a loop and if statements. The second game asks the user to guess country names from a range of 10 possible correct answers. This was accomplished using nested loops and if statements.
+
 ### Author: Simon Panek
 
 ### Links and Resources
