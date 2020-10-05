@@ -6,6 +6,12 @@ This app prompts a user for their name and then asks them to play a guessing gam
 
 9/30 Update: Page now includes 2 additional guessing games a number guessing game using a loop and if statements. The second game asks the user to guess country names from a range of 10 possible correct answers. This was accomplished using nested loops and if statements.
 
+## Hosting
+
+10/4 update: Website deployed to AWS S3 Bucket with Public Access
+
+[Deployed S3 Bucket](http://cf-201-lab-05b.s3-website-us-west-2.amazonaws.com/)
+
 ### Author: Simon Panek
 
 ### Paired Programming
